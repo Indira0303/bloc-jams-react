@@ -53,6 +53,22 @@ handlePrevClick() {
       this.play();
     }
 
+    handleNextClick() {
+      const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+      const lastIndex = this.state.album.songs.length - 1;
+      const newIndex = () => {
+        if (currentIndex === lastIndex){
+      return lastIndex
+    } else {
+       if (currentIndex<lastIndex){
+          return currentIndex + 1}
+        }
+      }
+      const newSong = this.state.album.songs[newIndex];
+      this.setSong(newSong);
+      this.play();
+    }
+
     mouseEnter (song){
       this.setState({ isHovered: song });
     }
@@ -107,6 +123,7 @@ handlePrevClick() {
            currentSong={this.state.currentSong}
            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
            handlePrevClick={() => this.handlePrevClick()}
+           handleNextClick={() => this.handleNextClick()}
          />
       </section>
     );
