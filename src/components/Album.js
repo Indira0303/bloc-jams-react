@@ -124,7 +124,7 @@ handleTimeChange(e) {
 formatTime (time) {
   var minutes = Math.floor(time / 60);
   var seconds = time - minutes * 60;
-  return "minutes" + ":" + "seconds"
+  return minutes + ":" + seconds
 }
 
   render() {
@@ -163,7 +163,7 @@ formatTime (time) {
            currentTime={this.audioElement.currentTime}
            duration={this.audioElement.duration}
            currentVolume={this.audioElement.currentVolume}
-           formatTime={() => this.audioElement.formatTime}
+           formatTime={() => this.audioElement.formatTime()}
            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
            handlePrevClick={() => this.handlePrevClick()}
            handleNextClick={() => this.handleNextClick()}
