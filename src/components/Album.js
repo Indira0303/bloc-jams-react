@@ -118,13 +118,18 @@ handleTimeChange(e) {
      return <span className="icon ion-md-play" />;
    }
 
-   return <button className="number">{index + 1} </button>;
+   return <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">{index + 1} </button>;
  }
 
 formatTime(time) {
   var minutes = Math.floor(time / 60);
   var seconds = Math.floor(time - minutes * 60);
-  return minutes + ":" + seconds
+  if(seconds<10){
+    return minutes + ":" + 0 + seconds
+  }
+  else {
+    return minutes + ":" + seconds
+  }
 }
 
   render() {
@@ -150,7 +155,7 @@ formatTime(time) {
           <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnter(song)} onMouseLeave={() => this.mouseLeave(song)}>
           <td>{ this.mouseIconAction(song, index) }</td>
           <td>{song.title}</td>
-          <td>{song.duration}
+          <td>{this.formatTime(song.duration)}
           </td>
           </tr>
           )
