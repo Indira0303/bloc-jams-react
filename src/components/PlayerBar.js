@@ -30,7 +30,8 @@ import React, { Component } from 'react';
        </section>
        <section id="volume-control">
          <div className="icon ion-md-volume-low"></div>
-         <input class="mdl-slider mdl-js-slider" type="range"
+         <input
+         type="range"
           className="seek-bar"
           value={this.props.currentVolume}
           max="1"

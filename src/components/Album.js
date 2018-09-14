@@ -143,7 +143,7 @@ formatTime(time) {
            <div id="release-info">{this.state.album.releaseInfo}</div>
          </div>
        </section>
-       <table id="song-list">
+       <table className="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--16dp">
           <colgroup>
             <col id="song-number-column" />
             <col id="song-title-column" />
@@ -153,7 +153,7 @@ formatTime(time) {
           {
           this.state.album.songs.map((song, index) =>
           <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnter(song)} onMouseLeave={() => this.mouseLeave(song)}>
-          <td>{ this.mouseIconAction(song, index) }</td>
+          <td className="mdl-data-table__cell--non-numeric">{ this.mouseIconAction(song, index) }</td>
           <td>{song.title}</td>
           <td>{this.formatTime(song.duration)}
           </td>

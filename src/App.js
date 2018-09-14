@@ -10,11 +10,16 @@ class App extends Component {
     return (
       <div className="App">
       <header>
-        <nav>
-         <Link to='/'>Landing</Link>
-         <Link to='/library'>Library</Link>
+        <nav className="link">
+           <br></br>
+         <Link to='/' className= "left">Landing</Link>
+         <Link to='/library' className= "right">Library</Link>
         </nav>
-         <h1>Bloc Jams</h1>
+<div class="mdl-grid center-items">
+        <div class="demo-card-image mdl-cell mdl-cell--4-col mdl-shadow--16dp">
+        </div>
+        </div>
+
        </header>
        <main>
         <Route exact path="/" component={Landing} />

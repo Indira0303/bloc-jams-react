@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -25,4 +26,25 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.link{
+  font-family: 'Press Start 2P', cursive;
+  font-size: large;
+
+}
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}
+.demo-card-image.mdl-cell {
+  width: 400px;
+  height: 300px;
+  background:  url("../src/bloc_jams_logo.png") center/cover;
+  align-self: center;
+}
+.mdl-grid.center-items {
+  justify-content: center;
 }
