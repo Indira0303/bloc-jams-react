@@ -15,8 +15,8 @@ class App extends Component {
          <Link to='/' className= "left">Landing</Link>
          <Link to='/library' className= "right">Library</Link>
         </nav>
-<div class="mdl-grid center-items">
-        <div class="demo-card-image mdl-cell mdl-cell--4-col mdl-shadow--16dp">
+<div className="mdl-grid center-items">
+        <div className="demo-card-image mdl-cell mdl-cell--4-col mdl-shadow--16dp">
         </div>
         </div>
 
